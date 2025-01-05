@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e6dada; /* يمكنك تحديد لون خلفية بدلاً من الصورة */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  /* العنوان */
+  h1 {
+    margin-top: 20px;
+  }
+  
+  /* النموذج */
+  form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  form input {
+    padding: 8px;
+  }
+  
+  form button {
+    padding: 8px 12px;
+  }
+  
+  /* القائمة */
+  ul {
+    list-style: none;
+    padding: 0;
+    width: 80%;
+    max-width: 600px;
+  }
+  
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #c9aa0f;
+    border-radius: 5px;
+  }
+  
+  li a {
+    text-decoration: none;
+    color: #0078D7;
+  }
+  
+  li.marked {
+    background-color: #b85f1b;
+  }
+  
+  /* الإجراءات */
+  li .actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .actions button i {
+  color:#333;
+  }
