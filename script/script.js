@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   linkList.innerHTML = ''; 
 });
 
-// إضافة رابط
+// add link
 linkForm.addEventListener('submit', function (event) {
   event.preventDefault();
   if (!linkText.value.trim() || !linkURL.value.trim()) {
