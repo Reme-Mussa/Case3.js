@@ -55,7 +55,7 @@ body {
   }
   
   li.marked {
-    background-color: #ffeb3b;
+    background-color: #d73f0d;
   }
   
   /* الإجراءات */
@@ -71,5 +71,5 @@ body {
   }
   
   .actions button i {
-    color: #333;
+    color: #d12828;
   }

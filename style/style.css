@@ -4,18 +4,18 @@ li a {
 }
 
 li.marked {
-  background-color: #ef170f;
+  background-color: #debb0e;
 }
 /* نمط النجمة */
 .star {
     font-size: 50px;
-    color: gray; /* اللون الافتراضي للنجمة */
+    color: #38383f; /* اللون الافتراضي للنجمة */
     cursor: pointer; /* لتغيير الشكل عند مرور الماوس فوق النجمة */
 }
 
 /* عند الضغط على النجمة، يتم تغيير اللون إلى الذهبي */
 .star.active {
-    color: gold;
+  color:gold;
 }
 li.favorite {
   background-color: #ffd700; /* Guld färg för favorit */
@@ -34,5 +34,5 @@ li.favorite {
 }
 
 .actions button i {
-  color: #0c0c0c;
+  color: #0d69d2;
 }
