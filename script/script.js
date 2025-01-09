@@ -8,13 +8,14 @@ document.addEventListener('DOMContentLoaded', () => {
   linkList.innerHTML = ''; 
 });
 
-// add link
+// إضافة رابط جديد
 linkForm.addEventListener('submit', function (event) {
   event.preventDefault();
   if (!linkText.value.trim() || !linkURL.value.trim()) {
     alert('Både länktext och URL måste anges!');
     return;
   }
+  
   addLink(linkText.value, linkURL.value);
   linkText.value = '';
   linkURL.value = '';
@@ -40,5 +41,43 @@ function removeLink(button) {
 
 // تحديد رابط كمفضل
 function markLink(button) {
-  button.closest('li').classList.toggle('marked');
+  const listItem = button.closest('li');
+  const starIcon = button.querySelector('i');
+
+  // إذا كانت العنصر مفضلًا، قم بإلغاء التفضيل
+  if (starIcon.classList.contains('favorited')) {
+    starIcon.classList.remove('favorited');
+  } else {
+    // إذا لم يكن مفضلًا، اجعل العنصر مفضلًا
+    starIcon.classList.add('favorited');
+  }
+
+  // إضافة أو إزالة فئة "marked" لتغيير تنسيق العنصر
+  listItem.classList.toggle('marked');
 }
+
+// إضافة رابط Google كمثال عند التحميل
+document.addEventListener('DOMContentLoaded', () => {
+  addLink('Google', 'https://www.google.com');
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const linkList = document.getElementById('linkList');
+
+  linkList.addEventListener('click', (event) => {
+    if (event.target.classList.contains('favorite-btn') || event.target.closest('.favorite-btn')) {
+      const listItem = event.target.closest('li');
+      listItem.classList.toggle('favorite');
+    }
+  });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const linkList = document.getElementById('linkList');
+
+  linkList.addEventListener('click', (event) => {
+    if (event.target.classList.contains('star')) {
+      event.target.classList.toggle('active');
+    }
+  });
+});

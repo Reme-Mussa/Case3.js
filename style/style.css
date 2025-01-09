@@ -1,0 +1,38 @@
+li a {
+  text-decoration: none;
+  color: #0078D7;
+}
+
+li.marked {
+  background-color: #ef170f;
+}
+/* نمط النجمة */
+.star {
+    font-size: 50px;
+    color: gray; /* اللون الافتراضي للنجمة */
+    cursor: pointer; /* لتغيير الشكل عند مرور الماوس فوق النجمة */
+}
+
+/* عند الضغط على النجمة، يتم تغيير اللون إلى الذهبي */
+.star.active {
+    color: gold;
+}
+li.favorite {
+  background-color: #ffd700; /* Guld färg för favorit */
+  border-color: #ff8c00; /* Mörk orange för gränsen */
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.actions button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.actions button i {
+  color: #0c0c0c;
+}
